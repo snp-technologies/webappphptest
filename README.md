@@ -12,7 +12,7 @@ The Dockerfile is a very basic implementation. Most relevant to Azure are the li
 ```
 RUN ln -s /home/site/wwwroot/files /var/www/html/files
 # Configure ports
-EXPOSE 2222 8
+EXPOSE 2222 80
 ```
 In the Application settings of the Azure Web App, the App setting WEBSITE_ENABME_APP_SERVICE_STORAGE is set to "true". 
 This enables Azure Storage native to the web app. Storage is mounted to the /home directory. The symbolic link defined in the image ensures that the files
